@@ -1,0 +1,36 @@
+{
+  "name": "monster",
+  "version": "0.0.1",
+  "description": "这是一个基于VUE的UI框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoguaishou404/monster.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "shiliangshen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiaoguaishou404/monster/issues"
+  },
+  "homepage": "https://github.com/xiaoguaishou404/monster#readme",
+  "dependencies": {
+    "vue": "^2.5.16",
+    "vue-hot-reload-api": "^2.3.4"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.3.0",
+    "parcel-bundler": "^1.9.2",
+    "sass": "^1.53.0",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  }
+}
