@@ -3,9 +3,13 @@
     <div :class="classPrefix && [`${classPrefix}-layout`]">
       <m-icon
         v-if="icon"
-        :class="classPrefix && [`${classPrefix}-icon`]"
-        :icon="icon"
+        :class="[
+          { [`${classPrefix}-icon`]: classPrefix },
+          { loading: loading },
+        ]"
+        :icon="loading ? '#icon-loading' : icon"
       ></m-icon>
+
       <slot></slot>
     </div>
   </button>
@@ -16,6 +20,10 @@ export default {
     icon: {},
     classPrefix: {
       type: String,
+    },
+    loading: {
+      type: Boolean,
+      default: false,
     },
   },
 };
@@ -40,5 +48,16 @@ export default {
 
 .m-button:focus {
   outline: none;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading {
+  animation: spin 2s infinite;
 }
 </style>
