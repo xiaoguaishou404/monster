@@ -11357,7 +11357,36 @@ function patchScopedSlots (instance) {
 }
 
 },{}],"src/button.vue":[function(require,module,exports) {
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  props: {
+    icon: {},
+    classPrefix: {
+      type: String
+    }
+  }
+};
+exports.default = _default;
         var $54c162 = exports.default || module.exports;
       
       if (typeof $54c162 === 'function') {
@@ -11370,7 +11399,28 @@ function patchScopedSlots (instance) {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("button", { staticClass: "m-button" }, [_vm._v("h1")])
+  return _c("button", { staticClass: "m-button" }, [
+    _c(
+      "div",
+      { class: _vm.classPrefix && [_vm.classPrefix + "-layout"] },
+      [
+        _vm.icon
+          ? _c(
+              "svg",
+              {
+                staticClass: "icon",
+                class: _vm.classPrefix && [_vm.classPrefix + "-icon"],
+                attrs: { "aria-hidden": "true" },
+              },
+              [_c("use", { attrs: { "xlink:href": _vm.icon } })]
+            )
+          : _vm._e(),
+        _vm._v(" "),
+        _vm._t("default"),
+      ],
+      2
+    ),
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -11379,7 +11429,7 @@ render._withStripped = true
             render: render,
             staticRenderFns: staticRenderFns,
             _compiled: true,
-            _scopeId: null,
+            _scopeId: "data-v-54c162",
             functional: undefined
           };
         })());
@@ -11417,10 +11467,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _vue.default.component('m-button', _button.default);
 
 new _vue.default({
-  el: "#app",
-  data: {
-    message: "hi"
-  }
+  el: "#app"
 });
 },{"vue":"node_modules/vue/dist/vue.common.js","./button.vue":"src/button.vue"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -11450,7 +11497,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "7451" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "13940" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
