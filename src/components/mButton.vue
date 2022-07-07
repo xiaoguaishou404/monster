@@ -1,17 +1,11 @@
 <template>
   <button class="m-button">
-    <div :class="classPrefix && [`${classPrefix}-layout`]">
-      <m-icon
-        v-if="icon"
-        :class="[
-          { [`${classPrefix}-icon`]: classPrefix },
-          { loading: loading },
-        ]"
-        :icon="loading ? '#icon-loading' : icon"
-      ></m-icon>
-
-      <slot></slot>
-    </div>
+    <m-icon v-if="icon" :class="[
+    { loading: loading },
+    { [`${classPrefix}-icon`]: classPrefix }]" 
+    :icon="loading ? '#icon-loading' : icon">
+    </m-icon>
+    <slot></slot>
   </button>
 </template>
 <script>
@@ -38,6 +32,7 @@ export default {
   color: var(--color);
 }
 
+
 .m-button:hover {
   border-color: var(--border-color-hover);
 }
@@ -58,6 +53,6 @@ export default {
   }
 }
 .loading {
-  animation: spin 2s infinite;
+  animation: spin 2s infinite linear;
 }
 </style>
