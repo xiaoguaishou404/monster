@@ -2,14 +2,18 @@
   <button class="m-button">
     <m-icon v-if="icon" :class="[
     { loading: loading },
-    { [`${classPrefix}-icon`]: classPrefix }]" 
-    :icon="loading ? '#icon-loading' : icon">
+    { [`${classPrefix}-icon`]: classPrefix }]" :icon="loading ? '#icon-loading' : icon">
     </m-icon>
     <slot></slot>
   </button>
 </template>
 <script>
+import mIcon from "./mIcon.vue";
+
 export default {
+  components: {
+    "m-icon": mIcon,
+  },
   props: {
     icon: {},
     classPrefix: {
@@ -31,7 +35,6 @@ export default {
   background: var(--button-bg);
   color: var(--color);
 }
-
 
 .m-button:hover {
   border-color: var(--border-color-hover);
