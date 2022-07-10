@@ -1,8 +1,9 @@
-import mButton from "./components/mButton.vue"
-import mButtonGroup from "./components/mButtonGroup.vue"
-import mIcon from "./components/mIcon.vue"
+import mButton from "./src/components/mButton.vue"
+import mButtonGroup from "./src/components/mButtonGroup.vue"
+import mIcon from "./src/components/mIcon.vue"
 
-Vue.component('m-button', mButton)
-Vue.component('m-button-group', mButtonGroup)
-Vue.component('m-icon', mIcon)
+// Vue.component('m-button', mButton)
+// Vue.component('m-button-group', mButtonGroup)
+// Vue.component('m-icon', mIcon)
 
+export { mButton, mButtonGroup, mIcon }
