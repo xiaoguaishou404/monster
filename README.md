@@ -21,12 +21,11 @@ author：史良燊
 
 ## Install
 
-`yarn add`
+`yarn add monster-vue-ui`
 
 or
 
-`npm install 
-`
+`npm install monster-vue-ui `
 
 
 ## End
