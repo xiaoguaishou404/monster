@@ -19,6 +19,8 @@ export default {
 </script>
 <style lang ="scss" scoped>
 .mButtonGroup {
+
+  
   display: flex;
   > .m-button {
     border-radius: 0;
