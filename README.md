@@ -6,12 +6,10 @@
 author：史良燊
 
 </h2>
-
-https://img.shields.io/github/issues/xiaoguaishou404/monster
-https://img.shields.io/github/forks/xiaoguaishou404/monster
-https://img.shields.io/github/stars/xiaoguaishou404/monster
-https://img.shields.io/github/license/xiaoguaishou404/monster
-https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fxiaoguaishou404%2Fmonster
+[![GitHub issues](https://img.shields.io/github/issues/xiaoguaishou404/monster)](https://github.com/xiaoguaishou404/monster/issues)
+[![GitHub forks](https://img.shields.io/github/forks/xiaoguaishou404/monster)](https://github.com/xiaoguaishou404/monster/network)
+[![GitHub stars](https://img.shields.io/github/stars/xiaoguaishou404/monster)](https://github.com/xiaoguaishou404/monster/stargazers)
+[![GitHub license](https://img.shields.io/github/license/xiaoguaishou404/monster)](https://github.com/xiaoguaishou404/monster/blob/main/LICENSE)
 
 ## 介绍
 
