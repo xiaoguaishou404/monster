@@ -7,6 +7,12 @@ author：史良燊
 
 </h2>
 
+https://img.shields.io/github/issues/xiaoguaishou404/monster
+https://img.shields.io/github/forks/xiaoguaishou404/monster
+https://img.shields.io/github/stars/xiaoguaishou404/monster
+https://img.shields.io/github/license/xiaoguaishou404/monster
+https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fxiaoguaishou404%2Fmonster
+
 ## 介绍
 
 这是我在学习 Vue 时制作的一个 UI 组件库 👀
