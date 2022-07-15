@@ -2,10 +2,7 @@
   <a target="_blank" rel="noopener noreferrer"><img width="100" src="public/flag.png" alt="logo"></a>
 </p>
 
-<h2 align="center">monster UI 
-author：史良燊
-
-</h2>
+<h2 align="center">monster UI </h2>
 
 ## 介绍
 
@@ -20,10 +17,27 @@ author：史良燊
 
 ## 开始使用
 
-1. 安装
- `{ box-sizing: border-box;}`
+暂未开发完毕！！！
 
- `yarn add monster-vue-ui`
+1. 安装
+ 
+
+```
+ *{ box-sizing: border-box;}
+
+ yarn add monster-vue-ui
+
+ new Vue({
+    el: "#app",
+    render: h => h(App)
+    components:{
+      "m-button":mButton,
+      "m-icon":mIcon,
+      ...
+    }
+  })
+
+```
 
 or
 
