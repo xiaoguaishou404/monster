@@ -46,6 +46,13 @@
       <m-icon icon="#icon-download"></m-icon>
 
     </div>
+    <div class="section-input">
+      <m-input value="禁止" :disabled=disabled></m-input>
+      <m-input value="只读" :readonly=true></m-input>
+      <m-input value="默认"></m-input>
+      <m-input :error="error"></m-input>
+
+    </div>
   </div>
 </template>
 <script>
@@ -53,9 +60,11 @@ export default {
   data() {
     return {
       type: true,
+      disabled: true,
+      readonly: true,
+      error: '错误',
     };
   },
-  
 };
 </script>
 <style lang ="scss" scoped>
