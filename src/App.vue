@@ -50,8 +50,52 @@
       <m-input value="禁止" :disabled=disabled></m-input>
       <m-input value="只读" :readonly=true></m-input>
       <m-input value="默认"></m-input>
-      <m-input :error="error"></m-input>
+      <m-input :error="error" v-model="vModel"></m-input>
+    </div>
 
+    <div>
+      <m-row>
+        <m-col span="24" :narrow-pc="{span:8}" :wide-pc="{span:6}">
+          <div class="demo"></div>
+        </m-col>
+        <m-col span="24" :narrow-pc="{span:8}" :wide-pc="{span:6}">
+          <div class="demo"></div>
+        </m-col>
+        <m-col span="24" :narrow-pc="{span:8}" :wide-pc="{span:6}">
+          <div class="demo"></div>
+        </m-col>
+        <m-col span="24" :narrow-pc="{span:8}" :wide-pc="{span:6}">
+          <div class="demo"></div>
+        </m-col>
+        <m-col span="24" :narrow-pc="{span:8}" :wide-pc="{span:6}">
+          <div class="demo"></div>
+        </m-col>
+        <m-col span="24" :narrow-pc="{span:8}" :wide-pc="{span:6}">
+          <div class="demo"></div>
+        </m-col>
+        <m-col span="24" :narrow-pc="{span:8}" :wide-pc="{span:6}">
+          <div class="demo"></div>
+        </m-col>
+        <m-col span="24" :narrow-pc="{span:8}" :wide-pc="{span:6}">
+          <div class="demo"></div>
+        </m-col>
+        <m-col span="24" :narrow-pc="{span:8}" :wide-pc="{span:6}">
+          <div class="demo"></div>
+        </m-col>
+        <m-col span="24" :narrow-pc="{span:8}" :wide-pc="{span:6}">
+          <div class="demo"></div>
+        </m-col>
+        <m-col span="24" :narrow-pc="{span:8}" :wide-pc="{span:6}">
+          <div class="demo"></div>
+        </m-col>
+        <m-col span="24" :narrow-pc="{span:8}" :wide-pc="{span:6}">
+          <div class="demo"></div>
+        </m-col>
+        <m-col span="24" :narrow-pc="{span:8}" :wide-pc="{span:6}">
+          <div class="demo"></div>
+        </m-col>
+
+      </m-row>
     </div>
   </div>
 </template>
@@ -62,7 +106,8 @@ export default {
       type: true,
       disabled: true,
       readonly: true,
-      error: '错误',
+      error: "错误",
+      vModel: "1234",
     };
   },
 };
@@ -92,5 +137,10 @@ export default {
   fill: currentColor;
   overflow: hidden;
   color: blue;
+}
+.demo {
+  background: #ddd;
+  border: 1px solid #666;
+  height: 100px;
 }
 </style>

@@ -5,11 +5,15 @@ import mButton from "./components/mButton.vue"
 import mButtonGroup from "./components/mButtonGroup.vue"
 import mIcon from "./components/mIcon.vue"
 import mInput from "./components/mInput.vue"
+import mRow from "./components/mRow.vue"
+import mCol from "./components/mCol.vue"
 
 Vue.component('m-button', mButton)
 Vue.component('m-button-group', mButtonGroup)
 Vue.component('m-icon', mIcon)
 Vue.component('m-input', mInput)
+Vue.component('m-row', mRow)
+Vue.component('m-col', mCol)
 
 new Vue({
     el: "#app",
@@ -93,7 +97,6 @@ try {
         // vm.$on('click', spy)
         // vm.$emit("click")
 
-
         expect(spy).to.have.been.called()
         expect(eventType).to.eq("click")
         vm.$destroy()
@@ -103,6 +106,8 @@ try {
 
         // 为什么老师的可以vm.$on和.click()可以一起使用，因为他的mButton内部和我设计的不一样
         // 他确实需要这样，在父级添加$on，子级再原生click触发
+
+        // dispatchEvent方法可以用js触发任意事件，看mdn
     }
 } catch (err) {
     window.errors = err

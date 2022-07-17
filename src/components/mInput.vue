@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <input :value="value" :disabled="disabled" :readonly="readonly" type="text">
+    <input @input="onInput" :value="value" :disabled="disabled" :readonly="readonly" type="text">
     <template v-if="error">
       <m-icon icon="#icon-error"></m-icon>
       <span>{{error}}</span>
@@ -9,6 +9,7 @@
 </template>
 <script>
 export default {
+  inheritAttrs: false,
   props: {
     value: {
       type: String,
@@ -23,6 +24,12 @@ export default {
     },
     error: {
       type: String,
+    },
+  },
+  methods: {
+    onInput(event) {
+        console.log(event);
+      this.$emit("input", event.target.value);
     },
   },
 };
