@@ -7,6 +7,19 @@ import mIcon from "./components/mIcon.vue"
 import mInput from "./components/mInput.vue"
 import mRow from "./components/mRow.vue"
 import mCol from "./components/mCol.vue"
+import mLayout from './components/mLayout.vue'
+import mHeader from './components/mHeader.vue'
+import mSider from './components/mSider.vue'
+import mContent from './components/mContent.vue'
+import mFooter from './components/mFooter.vue'
+import mToast from './components/mToast.vue'
+import plugin from './components/plugin.js'
+import mPopover from './components/mPopover.vue'
+import mTabsBody from './components/mTabs-body.vue'
+import mTabsHead from './components/mTabs-head.vue'
+import mTabsItem from './components/mTabs-item.vue'
+import mTabsPane from './components/mTabs-pane.vue'
+import mTabs from './components/mTabs.vue'
 
 Vue.component('m-button', mButton)
 Vue.component('m-button-group', mButtonGroup)
@@ -14,10 +27,51 @@ Vue.component('m-icon', mIcon)
 Vue.component('m-input', mInput)
 Vue.component('m-row', mRow)
 Vue.component('m-col', mCol)
+Vue.component('m-layout', mLayout)
+Vue.component('m-header', mHeader)
+Vue.component('m-sider', mSider)
+Vue.component('m-content', mContent)
+Vue.component('m-footer', mFooter)
+Vue.component('m-toast', mToast)
+Vue.component('m-popover', mPopover)
+Vue.component('m-tabs-body', mTabsBody)
+Vue.component('m-tabs-head', mTabsHead)
+Vue.component('m-tabs-item', mTabsItem)
+Vue.component('m-tabs-pane', mTabsPane)
+Vue.component('m-tabs', mTabs)
+Vue.use(plugin)
+
 
 new Vue({
     el: "#app",
-    render: h => h(App)
+    render: h => h(App),
+    methods: {
+        yyy() {
+            console.log('yyy')
+        },
+        showToast1() {
+            this.showToast('top')
+        },
+        showToast2() {
+            this.showToast('middle')
+        },
+        showToast3() {
+            this.showToast('bottom')
+        },
+        showToast(position) {
+            this.$toast(`你的智商目前为 ${parseInt(Math.random() * 100)}。你的智商需要充值！`, {
+                position,
+                enableHtml: false,
+                closeButton: {
+                    text: '已充值',
+                    callback() {
+                        console.log('他说已经充值智商了')
+                    }
+                },
+                autoClose: 3,
+            })
+        }
+    }
 })
 import chai from 'chai'
 import spies from 'chai-spies'

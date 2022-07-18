@@ -97,6 +97,104 @@
 
       </m-row>
     </div>
+
+    <div>
+
+      <m-layout style="color: white; margin-bottom:50px;">
+        <m-header style="height: 50px; background:lightskyblue;">
+          header
+        </m-header>
+        <m-content style="height: 100px; background:deepskyblue;">
+          content
+        </m-content>
+        <m-footer style="height: 50px; background:lightskyblue;">
+          footer
+        </m-footer>
+      </m-layout>
+    </div>
+
+    <div>
+      <m-button @click.native="$toast('点击弹出提示')">上方弹出</m-button>
+      <m-button @click.native="$toast('点击弹出提示', {position:'middle'})">中间弹出</m-button>
+      <m-button @click.native="$toast('点击弹出提示', {position:'bottom'})">下方弹出</m-button>
+
+      <m-button @click.native="onClickButton">上方弹出</m-button>
+      <m-button @click.native="onClickColorButton">上方弹出</m-button>
+    </div>
+    <br>
+    <div style="display:flex;justify-content: center;">
+      <m-popover position="left">
+        <m-button>左边弹出</m-button>
+        <template slot="content">
+          <strong style="color: #06f">支持加粗</strong>
+        </template>
+      </m-popover>
+      <m-popover>
+        <m-button>上方弹出</m-button>
+        <template slot="content">
+          <a href="https://www.baidu.com/">支持链接</a>
+        </template>
+      </m-popover>
+      <m-popover position="bottom">
+        <m-button>下方弹出</m-button>
+        <template slot="content">普通文本</template>
+      </m-popover>
+      <m-popover position="right">
+        <m-button>右边弹出</m-button>
+        <template slot="content">普通文本</template>
+      </m-popover>
+
+      <m-popover position="left" trigger="hover">
+        <m-button>左边提示</m-button>
+        <template slot="content"> 提示内容 </template>
+      </m-popover>
+      <m-popover trigger="hover">
+        <m-button>上方提示</m-button>
+        <template slot="content"> 提示内容 </template>
+      </m-popover>
+      <m-popover position="bottom" trigger="hover">
+        <m-button>下方提示</m-button>
+        <template slot="content"> 提示内容 </template>
+      </m-popover>
+      <m-popover position="right" trigger="hover">
+        <m-button>右边提示</m-button>
+        <template slot="content"> 提示内容 </template>
+      </m-popover>
+
+    </div>
+
+    <div>
+      <div style="margin-top: 10px">
+        <div>
+          <m-tabs :selected="selected1">
+            <m-tabs-head>
+              <m-tabs-item name="1">标题一</m-tabs-item>
+              <m-tabs-item name="2">标题二</m-tabs-item>
+            </m-tabs-head>
+            <m-tabs-body>
+              <m-tabs-pane name="1">内容1</m-tabs-pane>
+              <m-tabs-pane name="2">内容2</m-tabs-pane>
+            </m-tabs-body>
+          </m-tabs>
+        </div>
+
+        <div style="margin-top: 20px">
+          <m-tabs :selected="selected2">
+            <m-tabs-head>
+              <m-tabs-item name="1">标题一</m-tabs-item>
+              <m-tabs-item disabled name="2">禁用标题</m-tabs-item>
+              <m-tabs-item name="3">标题三</m-tabs-item>
+            </m-tabs-head>
+            <m-tabs-body>
+              <m-tabs-pane name="1">内容1</m-tabs-pane>
+              <m-tabs-pane name="2">内容2</m-tabs-pane>
+              <m-tabs-pane name="3">内容3</m-tabs-pane>
+            </m-tabs-body>
+          </m-tabs>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 <script>
@@ -108,7 +206,27 @@ export default {
       readonly: true,
       error: "错误",
       vModel: "1234",
+      selected1: "1",
+      selected2: "1",
     };
+  },
+  methods: {
+    onClickButton() {
+      this.$toast("你知道我在等你吗？", {
+        closeButton: {
+          text: "知道了",
+          callback: () => {
+            console.log("他说知道了");
+          },
+        },
+      });
+    },
+
+    onClickColorButton() {
+      this.$toast('<strong style="color: #3eaf7c;">加粗带颜色的提示</strong>', {
+        enableHtml: true,
+      });
+    },
   },
 };
 </script>
@@ -142,5 +260,13 @@ export default {
   background: #ddd;
   border: 1px solid #666;
   height: 100px;
+}
+</style>
+<style >
+.m-toast {
+  z-index: 30;
+}
+.m-popover {
+  z-index: 30;
 }
 </style>
