@@ -4,7 +4,10 @@
     { loading: loading },
     { [`${classPrefix}-icon`]: classPrefix }]" :icon="loading ? '#icon-loading' : icon">
     </m-icon>
-    <slot></slot>
+    <div class="slot">
+      <slot></slot>
+    </div>
+
   </button>
 </template>
 <script>
@@ -26,6 +29,26 @@ export default {
   },
 };
 </script>
+<style >
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.2em;
+}
+
+:root {
+  --font-size: 1em;
+  --button-bg: rgba(89, 200, 173, 1);
+  --button-active-bg: #eee;
+  --border-radius: calc(3 * var(--font-size));
+  --color: #333;
+  --border-color: #999;
+  --border-color-hover: #666;
+}
+</style>
+
+
 <style lang ="scss" scoped>
 .m-button {
   font-size: var(--font-size);
@@ -34,6 +57,14 @@ export default {
   border: 2px solid var(--border-color);
   background: var(--button-bg);
   color: var(--color);
+  display: flex;
+  flex-wrap: nowrap;
+
+  > .slot {
+    flex-wrap: nowrap;
+    display: flex;
+    flex-shrink: 0;
+  }
 }
 
 .m-button:hover {

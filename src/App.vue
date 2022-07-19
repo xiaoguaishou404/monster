@@ -195,6 +195,13 @@
       </div>
     </div>
 
+    <div>
+      <m-collapse :selected.sync="selectedTab" single>
+        <m-collapse-item title="标题1" name="1">标题1的内容</m-collapse-item>
+        <m-collapse-item title="标题2" name="3">标题2的内容</m-collapse-item>
+        <m-collapse-item title="标题3" name="2">标题3的内容</m-collapse-item>
+      </m-collapse>
+    </div>
   </div>
 </template>
 <script>
@@ -208,6 +215,7 @@ export default {
       vModel: "1234",
       selected1: "1",
       selected2: "1",
+      selectedTab: ['1']
     };
   },
   methods: {

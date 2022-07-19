@@ -20,6 +20,8 @@ import mTabsHead from './components/mTabs-head.vue'
 import mTabsItem from './components/mTabs-item.vue'
 import mTabsPane from './components/mTabs-pane.vue'
 import mTabs from './components/mTabs.vue'
+import mCollapse from './components/mCollapse.vue'
+import mCollapseItem from './components/mCollapseItem.vue'
 
 Vue.component('m-button', mButton)
 Vue.component('m-button-group', mButtonGroup)
@@ -39,6 +41,8 @@ Vue.component('m-tabs-head', mTabsHead)
 Vue.component('m-tabs-item', mTabsItem)
 Vue.component('m-tabs-pane', mTabsPane)
 Vue.component('m-tabs', mTabs)
+Vue.component('m-collapse', mCollapse)
+Vue.component('m-collapse-item', mCollapseItem)
 Vue.use(plugin)
 
 
