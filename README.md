@@ -1,5 +1,5 @@
 <p align="center">
-  <a target="_blank" rel="noopener noreferrer"><img width="100" src="public/flag.png" alt="logo"></a>
+  <a target="_blank" rel="noopener noreferrer"><img width="100" src="public/logo.png" alt="logo"></a>
 </p>
 
 <h2 align="center">monster UI </h2>

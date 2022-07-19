@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/monsterDocument/',
+  base: '/monster/',
   head: [['link', { rel: 'icon', href: 'hero.jpg' }]],
   title: 'monsterUI',
   description: '一个不太一样的 UI 框架',
